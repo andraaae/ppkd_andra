@@ -102,8 +102,8 @@ class Tugas2 extends StatelessWidget {
               color: Colors.blue,
               gradient: LinearGradient(
                 colors: [
-                  const Color.fromARGB(255, 255, 126, 117),
-                  const Color.fromARGB(255, 120, 194, 255),
+                  const Color.fromARGB(255, 255, 194, 189),
+                  const Color.fromARGB(255, 183, 223, 255),
                   const Color.fromARGB(255, 215, 255, 217),
                 ],
               ),
@@ -116,7 +116,7 @@ class Tugas2 extends StatelessWidget {
                   children: [
                     Icon(Icons.code),
                     SizedBox(width: 24),
-                    Text("AAARRRGGGHHH", style: TextStyle(fontSize: 25)),
+                    Text("AAARRRGGGHHH", style: TextStyle(fontSize: 15)),
                   ],
                 ),
               ],
