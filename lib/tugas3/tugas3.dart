@@ -19,7 +19,7 @@ class Tugas3 extends StatelessWidget {
         backgroundColor: Color(0xFF043915),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(7.0),
+        padding: const EdgeInsets.all(15.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
