@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ppkd_andra/slicing/home_screen.dart';
 
 class TugasSlicing extends StatefulWidget {
   const TugasSlicing({super.key});
@@ -94,7 +95,10 @@ class _TugasSlicingState extends State<TugasSlicing> {
                   ),
                   child: TextButton(
                     onPressed: () {
-                      print('Sign in');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()),
+                      );
                     },
                     child: Text(
                       "Sign in",
