@@ -9,6 +9,7 @@ import 'package:ppkd_andra/tugas6/drawer.dart';
 import 'package:ppkd_andra/tugas6/tugas_slicing.dart';
 import 'package:ppkd_andra/trial2/trial2.dart';
 import 'package:ppkd_andra/tugas7/menu_tugas7.dart';
+import 'package:ppkd_andra/tugas7/tugas7_2.dart';
 
 void main() {
   runApp(const MyApp());
