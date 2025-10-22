@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+
+class  extends StatefulWidget {
+  const Tugas7_2({super.key});
+
+  @override
+  State<Tugas7_2> createState() => _Tugas7_2State();
+}
+
+class _Tugas7_2State extends State<Tugas7_2> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('About application'),
+        backgroundColor: Color(0xFF4C763B),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(22),
+        child: Column(
+          children: [
+            Text(
+              'aGreen',
+            style: TextStyle(color: Color(0xFFFFFD8F), fontSize: 30),
+            ),
+            SizedBox(height: 11),
+            Text('Aplikasi ini membantu kamu untuk rawat teman hijau di rumah kamu'),
+            Spacer(),
+            SizedBox(height: 60),
+            Text('Andra'),
+            SizedBox(height: 8),
+            Text('Ver 2.0'),
+          ],
+        ),
+        ),
+    );
+  }
+}

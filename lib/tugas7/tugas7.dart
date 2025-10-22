@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:ppkd_andra/tugas7/menu_tugas7.dart';
+import 'package:ppkd_andra/tugas7/tugas7_2.dart';
 
 class Tugas7 extends StatefulWidget {
   const Tugas7({super.key});
@@ -61,21 +63,29 @@ class Switch7State extends State<Switch7> {
   bool isSwitched = false;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Switch(
-          value: isSwitched,
-          onChanged: (value) {
-            setState(() {
-              isSwitched = value;
-            });
-          },
-        ),
-        Text(
-          isSwitched ? "On" : "Off",
-          style: TextStyle(color: Colors.blueGrey),
-        ),
-      ],
+    return Container(
+      color: isSwitched ? Colors.black : Colors.white,
+      child: Column(
+        children: [
+          Switch(
+            value: isSwitched,
+            onChanged: (value) {
+              setState(() {
+                isSwitched = value;
+              });
+            },
+          ),
+          Text(
+            isSwitched ? "On" : "Off",
+            style: TextStyle(color: Colors.blueGrey),
+          ),
+          Container(
+            height: 500,
+            width: 500,
+            color: isSwitched ? Colors.black : Colors.white,
+          ),
+        ],
+      ),
     );
   }
 }
@@ -125,58 +135,60 @@ class _dropDown7State extends State<dropDown7> {
 
 //4
 
-class DatePickerWidgetDay16 extends StatefulWidget {
-  const DatePickerWidgetDay16({super.key});
+class DatePicker extends StatefulWidget {
+  const DatePicker({super.key});
 
   @override
-  State<DatePickerWidgetDay16> createState() => _DatePickerWidgetDay16State();
+  State<DatePicker> createState() => _DatePickerState();
 }
 
-class _DatePickerWidgetDay16State extends State<DatePickerWidgetDay16> {
+class _DatePickerState extends State<DatePicker> {
   DateTime? selectedPicked = DateTime.now();
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(DateFormat('EEEE, MMMM-yyyy', "id_ID").format(selectedPicked!)),
+    return Center(
+      child: Column(
+        children: [
+          Text(selectedPicked.toString()),
+          Text(DateFormat('EEEE, MMMM-yyyy', "id_ID").format(selectedPicked!)),
 
-        ElevatedButton(
-          onPressed: () async {
-            final DateTime? picked = await showDatePicker(
-              context: context,
-              firstDate: DateTime(1800),
-              lastDate: DateTime(2111),
-            );
-            if (picked != null) {
-              print(picked);
-              setState(() {
-                selectedPicked = picked;
-              });
-            }
-          },
-          child: Text("Isi tanggal :"),
-        ),
-        SizedBox(height: 20),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(DateFormat.EEEE('yyyy-MM-dd').format(selectedPicked!)),
-          ],
-        ),
-      ],
+          ElevatedButton(
+            onPressed: () async {
+              final DateTime? picked = await showDatePicker(
+                context: context,
+                initialDate: DateTime.now(),
+                firstDate: DateTime(1800),
+                lastDate: DateTime(2111),
+              );
+              if (picked != null) {
+                print(picked);
+                setState(() {
+                  selectedPicked = picked;
+                });
+              }
+            },
+            child: Text("Isi tanggal :"),
+          ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Text("Tanggal : $selectedPicked")],
+          ),
+        ],
+      ),
     );
   }
 }
 
 //5
-class TimePickerWidgetDay16 extends StatefulWidget {
-  const TimePickerWidgetDay16({super.key});
+class TimePicker extends StatefulWidget {
+  const TimePicker({super.key});
 
   @override
-  State<TimePickerWidgetDay16> createState() => _TimePickerWidgetDay16State();
+  State<TimePicker> createState() => _TimePickertate();
 }
 
-class _TimePickerWidgetDay16State extends State<TimePickerWidgetDay16> {
+class _TimePickertate extends State<TimePicker> {
   TimeOfDay? selectedTime;
   @override
   Widget build(BuildContext context) {
@@ -211,6 +223,40 @@ class _TimePickerWidgetDay16State extends State<TimePickerWidgetDay16> {
           ],
         ),
       ],
+    );
+  }
+}
+
+class ButtomNav extends StatefulWidget {
+  const ButtomNav({super.key});
+
+  @override
+  State<ButtomNav> createState() => _ButtomNav();
+}
+
+class _ButtomNav extends State<ButtomNav> {
+  int _selectedIndex = 0;
+  static const List<Widget> _widgetOptions = [menuTugas7(), Tugas7_2()];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: _widgetOptions[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: (index) {
+          print(index);
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings_accessibility),
+            label: 'About aplication',
+          ),
+        ],
+      ),
     );
   }
 }

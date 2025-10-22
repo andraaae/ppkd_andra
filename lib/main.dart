@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:ppkd_andra/trial/buttomnav.dart';
 import 'package:ppkd_andra/trial/main_screen.dart';
 import 'package:ppkd_andra/tugas2/tugas2.dart';
@@ -7,10 +8,12 @@ import 'package:ppkd_andra/tugas4/tugas4.dart';
 import 'package:ppkd_andra/tugas5/tugas5.dart';
 import 'package:ppkd_andra/tugas6/drawer.dart';
 import 'package:ppkd_andra/tugas6/tugas_slicing.dart';
-import 'package:ppkd_andra/trial2/trial2.dart';
 import 'package:ppkd_andra/tugas7/menu_tugas7.dart';
+import 'package:ppkd_andra/tugas7/tugas7.dart';
+import 'package:ppkd_andra/tugas7/tugas7_2.dart';
 
-void main() {
+void main() async {
+  await initializeDateFormatting('id_ID', null);
   runApp(const MyApp());
 }
 
@@ -40,7 +43,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Tugas7(),
+      home: ButtomNav(),
     );
   }
 }
