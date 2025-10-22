@@ -9,8 +9,11 @@ import 'package:ppkd_andra/tugas5/tugas5.dart';
 import 'package:ppkd_andra/tugas6/drawer.dart';
 import 'package:ppkd_andra/tugas6/tugas_slicing.dart';
 import 'package:ppkd_andra/tugas7/menu_tugas7.dart';
+
 import 'package:ppkd_andra/tugas7/tugas7.dart';
+
 import 'package:ppkd_andra/tugas7/tugas7_2.dart';
+import 'package:ppkd_andra/tugas8/tugas8.dart';
 
 void main() async {
   await initializeDateFormatting('id_ID', null);
