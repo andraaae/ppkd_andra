@@ -14,6 +14,9 @@ import 'package:ppkd_andra/tugas7/tugas7.dart';
 
 import 'package:ppkd_andra/tugas7/tugas7_2.dart';
 import 'package:ppkd_andra/tugas8/tugas8.dart';
+import 'package:ppkd_andra/tugas9/listmap.dart';
+import 'package:ppkd_andra/tugas9/listviewbuilder.dart';
+import 'package:ppkd_andra/tugas9/tugas9.dart';
 
 void main() async {
   await initializeDateFormatting('id_ID', null);
@@ -46,7 +49,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ButtomNav(),
+      home: Listmap(),
     );
   }
 }

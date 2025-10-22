@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_andra/tugas7/tugas7.dart';
 
-class menuTugas7 extends StatefulWidget {
-  const menuTugas7({super.key});
+class DrawerTugas9 extends StatefulWidget {
+  const DrawerTugas9({super.key});
 
   @override
-  State<menuTugas7> createState() => _menuTugas7State();
+  State<DrawerTugas9> createState() => _menuTugas7State();
 }
 
-class _menuTugas7State extends State<menuTugas7> {
+class _menuTugas7State extends State<DrawerTugas9> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = [
     Tugas7(),

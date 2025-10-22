@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:ppkd_andra/tugas7/menu_tugas7.dart';
+
 import 'package:ppkd_andra/tugas7/tugas7_2.dart';
 
 class ButtomNav extends StatefulWidget {
@@ -12,7 +12,7 @@ class ButtomNav extends StatefulWidget {
 
 class _ButtomNav extends State<ButtomNav> {
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = [menuTugas7(), Tugas7_2()];
+  static const List<Widget> _widgetOptions = [ Tugas7_2()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
