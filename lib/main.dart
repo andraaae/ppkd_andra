@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:ppkd_andra/trial/buttomnav.dart';
 import 'package:ppkd_andra/trial/main_screen.dart';
+
+import 'package:ppkd_andra/tugas10/konfirmasi_10.dart';
+import 'package:ppkd_andra/tugas10/tugas10.dart';
 import 'package:ppkd_andra/tugas2/tugas2.dart';
 import 'package:ppkd_andra/tugas3/tugas3.dart';
 import 'package:ppkd_andra/tugas4/tugas4.dart';
@@ -49,7 +52,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Listmap(),
+      home: ListviewBuilder(),
     );
   }
 }

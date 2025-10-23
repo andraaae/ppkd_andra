@@ -11,16 +11,16 @@ class Listmap extends StatefulWidget {
 
 class _ListmapState extends State<Listmap> {
   final List<Map<String, dynamic>> cosmetics = [
-    {"name": "Skincare", "Image": Image.asset("assets/skincare.jpg")},
-    {"name": "Makeup", "Image": Image.asset("assets/makeup.jpg")},
-    {"name": "Hair Care", "Image": Image.asset("assets/haircare.jpg")},
-    {"name": "Body Care", "Image": Image.asset("assets/body care.jpg")},
-    {"name": "Nail Polish", "Image": Image.asset("assets/Nail polish.jpg")},
-    {"name": "Fragrance", "Image": Image.asset("assets/fragrance.jpg")},
-    {"name": "Male Cosmetics", "Image": Image.asset("assets/male product.jpg")},
-    {"name": "Cosmetic Tools", "Image": Image.asset("assets/makeup tools.jpg")},
-    {"name": "Intimate Cosmetics", "Image": Image.asset("assets/intimate cosmetics.jpg")},
-    {"name": "Ethnical Cosmetics","Image": Image.asset("assets/ethnical products.png")},
+    {"name": "Skincare", "Icon": Icons.account_balance_wallet_rounded},
+    {"name": "Makeup", "Icon": Icons.access_alarms_sharp},
+    {"name": "Hair Care", "Icon": Icons.add_comment},
+    {"name": "Body Care", "Icon": Icons.accessibility_new_rounded},
+    {"name": "Nail Polish", "Icon": Icons.add_circle_rounded},
+    {"name": "Fragrance", "Icon": Icons.add_shopping_cart_sharp},
+    {"name": "Male Cosmetics", "Icon": Icons.accessibility},
+    {"name": "Cosmetic Tools", "Icon": Icons.add_to_photos},
+    {"name": "Intimate Cosmetics", "Icon": Icons.join_full},
+    {"name": "Ethnical Cosmetics", "Icon": Icons.api_sharp},
   ];
   @override
   Widget build(BuildContext context) {
