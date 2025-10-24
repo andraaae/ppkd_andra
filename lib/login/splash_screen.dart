@@ -48,7 +48,7 @@ class _SplasScreenState extends State<SplashScreen> {
         children: [
           Center(child: Image.asset(AppImage.skincare)),
           Text(
-            "Apel Apps",
+            "Skincare Apps",
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
         ],
