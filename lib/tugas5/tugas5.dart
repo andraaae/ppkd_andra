@@ -136,7 +136,7 @@ class _Tugas5State extends State<Tugas5> {
                   showText3 = !showText3;
                 });
               },
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 height: 100,
                 child: Center(

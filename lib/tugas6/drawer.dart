@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_andra/slicing/home_screen.dart';
-import 'package:ppkd_andra/tugas4/tugas4.dart';
 import 'package:ppkd_andra/tugas5/tugas5.dart';
-import 'package:ppkd_andra/tugas6/tugas_slicing.dart';
 
 class DrawerWidgetDay15 extends StatefulWidget {
   const DrawerWidgetDay15({super.key});
