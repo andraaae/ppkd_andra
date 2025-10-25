@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:ppkd_andra/slicing/home_screen.dart';
+import 'package:ppkd_andra/tugas11/login2/login_2.dart';
 import 'package:ppkd_andra/tugas5/tugas5.dart';
 
-class DrawerWidgetDay15 extends StatefulWidget {
-  const DrawerWidgetDay15({super.key});
+class DrawerWidget extends StatefulWidget {
+  const DrawerWidget({super.key});
 
   @override
-  State<DrawerWidgetDay15> createState() => _DrawerWidgetDay15State();
+  State<DrawerWidget> createState() => _DrawerWidgetState();
 }
 
-class _DrawerWidgetDay15State extends State<DrawerWidgetDay15> {
+class _DrawerWidgetState extends State<DrawerWidget> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = [
-    // Center(child: Text("Home")),
-    HomeScreen(),
-    Tugas5(),
+    //Center(child: Text("Home"),)
+    Login2(),
+   Tugas5(),
   ];
   void onTapDrawer(int index) {
     setState(() {
@@ -26,16 +26,16 @@ class _DrawerWidgetDay15State extends State<DrawerWidgetDay15> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Drawer")),
+      appBar: AppBar(title: Text("Laci")),
       drawer: Drawer(
         child: ListView(
           children: [
             ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage("assets/images/habibie.jpg"),
+                backgroundImage: AssetImage('assets/images/sun.jpeg'),
               ),
-              title: Text("Habibie"),
-              subtitle: Text("Instruktur PPKD"),
+              title: Text("admin"),
+              subtitle: Text("Keren"),
             ),
             Divider(),
 
@@ -44,15 +44,16 @@ class _DrawerWidgetDay15State extends State<DrawerWidgetDay15> {
                 onTapDrawer(0);
               },
               leading: Icon(Icons.home),
-              title: Text("Home"),
+              title: Text("Rumah"),
             ),
             Divider(),
+
             ListTile(
               onTap: () {
                 onTapDrawer(1);
               },
-              leading: Icon(Icons.payment),
-              title: Text("Payment"),
+              leading: Icon(Icons.gesture),
+              title: Text("iya"),
             ),
           ],
         ),

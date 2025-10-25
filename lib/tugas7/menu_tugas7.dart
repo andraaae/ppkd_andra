@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_andra/tugas7/tugas7.dart';
 
-class menuTugas7 extends StatefulWidget {
-  const menuTugas7({super.key});
+class DrawerTugas9 extends StatefulWidget {
+  const DrawerTugas9({super.key});
 
   @override
-  State<menuTugas7> createState() => _menuTugas7State();
+  State<DrawerTugas9> createState() => _menuTugas7State();
 }
 
-class _menuTugas7State extends State<menuTugas7> {
+class _menuTugas7State extends State<DrawerTugas9> {
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = [Tugas7(), Switch7(), dropDown7()];
+  static const List<Widget> _widgetOptions = [
+    Tugas7(),
+    Switch7(),
+    dropDown7(),
+    DatePicker(),
+    TimePicker(),
+  ];
 
   void onTapDrawer(int index) {
     setState(() {
@@ -30,8 +36,8 @@ class _menuTugas7State extends State<menuTugas7> {
               leading: CircleAvatar(
                 backgroundImage: AssetImage("assets/images/Google.png"),
               ),
-              title: Text("Habibie"),
-              subtitle: Text("Instruktur PPKD"),
+              title: Text("Andra"),
+              subtitle: Text("Student"),
             ),
             Divider(),
 
@@ -48,7 +54,7 @@ class _menuTugas7State extends State<menuTugas7> {
                 onTapDrawer(1);
               },
               leading: Icon(Icons.switch_access_shortcut),
-              title: Text("switch"),
+              title: Text("Switch"),
             ),
             Divider(),
             ListTile(
@@ -56,7 +62,7 @@ class _menuTugas7State extends State<menuTugas7> {
                 onTapDrawer(2);
               },
               leading: Icon(Icons.category),
-              title: Text("kategori"),
+              title: Text("Category"),
             ),
             Divider(),
             ListTile(
@@ -64,7 +70,7 @@ class _menuTugas7State extends State<menuTugas7> {
                 onTapDrawer(3);
               },
               leading: Icon(Icons.date_range),
-              title: Text("tanggal"),
+              title: Text("Date"),
             ),
             Divider(),
             ListTile(
@@ -72,7 +78,7 @@ class _menuTugas7State extends State<menuTugas7> {
                 onTapDrawer(4);
               },
               leading: Icon(Icons.date_range),
-              title: Text("Date"),
+              title: Text("Time"),
             ),
           ],
         ),
