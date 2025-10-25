@@ -2,7 +2,6 @@ import 'package:delightful_toast/delight_toast.dart';
 import 'package:delightful_toast/toast/components/toast_card.dart';
 import 'package:flutter/material.dart';
 import 'package:ppkd_andra/constants/app_image.dart';
-import 'package:ppkd_andra/models/model.dart';
 
 class ListviewBuilder extends StatefulWidget {
   const ListviewBuilder({super.key});

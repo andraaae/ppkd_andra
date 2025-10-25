@@ -17,8 +17,8 @@ class _RegisterState extends State<Register> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController cityController =TextEditingController();
   bool isVisible = false;
-  List <bool> _isSelected = [true, false];
-  int _selectedIndex = 0;
+  List <bool> isSelected = [true, false];
+  int selectedIndex = 0;
     return Scaffold( backgroundColor: Color(0xff66785F),
       appBar: AppBar(title: Text("aGreen")),
       body: Padding(

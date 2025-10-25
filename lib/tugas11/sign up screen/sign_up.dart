@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_andra/login/login.dart';
-import 'package:ppkd_andra/tugas11/sign%20up%20screen/sign_up.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});

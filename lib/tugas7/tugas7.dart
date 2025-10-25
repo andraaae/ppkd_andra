@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:ppkd_andra/tugas7/menu_tugas7.dart';
-import 'package:ppkd_andra/tugas7/tugas7_2.dart';
 
 class Tugas7 extends StatefulWidget {
   const Tugas7({super.key});

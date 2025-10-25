@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ppkd_andra/tugas10/konfirmasi_10.dart';
 
 class Tugas10 extends StatefulWidget {
   const Tugas10({super.key});
