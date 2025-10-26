@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ppkd_andra/login/preference_handler.dart';
+import 'package:ppkd_andra/trial3/trial3/database/dbhelper.dart';
+import 'package:ppkd_andra/trial3/trial3/view3/welcomepage.dart';
 import 'package:ppkd_andra/tugas11/login2/login_2.dart';
 import 'package:ppkd_andra/tugas11/sign%20up%20screen/sign_up.dart';
 
@@ -96,13 +99,61 @@ class _LoginScreen2State extends State<LoginScreen2> {
                     return 'Minimal password length 7 characters';
                   }
                   return null;
-                },
+                }  
+              ), 
+              SizedBox(height: 16, 
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xffCA7842),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12),
+                  )
+                ),
+                onPressed: () async {
+                  final email = emailController.text;
+                  final password = passwordController.text;
+                  final username = await DbHelper.loginUser(
+                    email: email,
+                    password: password);
+                    if (username != null) {
+                      PreferenceHandler.saveLogin(true);
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Welcomepage(
+                        id: 'id', 
+                        name: 'username', 
+                        email: 'email',
+                        city: 'city',
+                        ),
+                      ),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Login success ${username}')
+                    ),
+                    );
+                    } else {ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Email and password incorrect'),
+                      )
+                      );
+                      }
+                }, child: Text('Login',
+                style: TextStyle(color: Color(0xffF0F2BD)),
+                ),
               ),
-             
+            ),
+              Padding(
+                      padding: EdgeInsets.all(12),
+                      child: Row(
+                        children: [
+                          Expanded(child: Divider(thickness: 1)),
+                          SizedBox(width: 10),
+                          Text("Or"),
+                          SizedBox(width: 10),
+                          Expanded(child: Divider(thickness: 1)),
+                        ],
+                      ),
+                    ),
+                
             ],
           ),
         ),
-      )
+      ),
     );
   }
 }

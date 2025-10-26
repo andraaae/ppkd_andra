@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:ppkd_andra/login_2/login_2.dart';
+import 'package:ppkd_andra/trial3/trial3/view3/login_screen2.dart';
 
 import 'package:ppkd_andra/trial3/trial3/view3/register.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:ppkd_andra/login/splash_screen.dart';
 import 'package:ppkd_andra/trial/buttomnav.dart';
 import 'package:ppkd_andra/trial/main_screen.dart';
+import 'package:ppkd_andra/trial3/trial3/view3/welcomepage.dart';
 
 import 'package:ppkd_andra/tugas10/konfirmasi_10.dart';
 import 'package:ppkd_andra/tugas10/tugas10.dart';
@@ -60,7 +63,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       
-      home: SignUp(),
+      home: Register(),
     );
   }
 }
