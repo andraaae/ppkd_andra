@@ -26,7 +26,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Laci")),
+      appBar: AppBar(title: Text("Drawer")),
       drawer: Drawer(
         child: ListView(
           children: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ppkd_andra/trial3/trial3/view3/login_screen2.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -17,6 +18,7 @@ class _RegisterState extends State<Register> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController cityController =TextEditingController();
   bool isVisible = false;
+  bool _obscurePass = true;
   List <bool> isSelected = [true, false];
   int selectedIndex = 0;
     return Scaffold( backgroundColor: Color(0xff66785F),
@@ -35,7 +37,7 @@ class _RegisterState extends State<Register> {
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Nama wajib diisi';
+                    return 'Name can not be empty';
                   }
                   return null;
                 },
@@ -49,30 +51,40 @@ class _RegisterState extends State<Register> {
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Email harus mengandung @';
+                    return 'Email must contain @';
                   } else if (!value.contains('@')) {
-                    return 'Email tidak valid';
+                    return 'Email is invalid';
                   } else if (!RegExp(
                     r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$",
                   ).hasMatch(value)) {
-                    return 'Format email tidak valid';
+                    return 'Email form is invalid';
                   }
                   return null;
                 },
               ),
               SizedBox(height: 16),
               TextFormField(
+                obscureText: _obscurePass,
                 controller: passwordController,
                 decoration: InputDecoration(
                   labelText: 'Password',
                   border: OutlineInputBorder(),
+                  suffixIcon: IconButton(
+                    icon: Icon(_obscurePass ? Icons.visibility_off : Icons.visibility),
+                    onPressed: (){
+                      setState(() {
+                        _obscurePass = !_obscurePass;
+                      });
+                    },
+                    ),
+                    
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Password tidak boleh kosong';
+                    return 'Password can not be empty';
                   } else if (value.length < 7) {
-                    return 'Password minimal 7 karakter';
-                  }
+                    return 'Minimum password length 7 characters';
+                  } 
                   return null;
                 },
               ),
@@ -85,7 +97,7 @@ class _RegisterState extends State<Register> {
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Nomor Handphone tidak boleh kosong';
+                    return 'Phone number can not be empty';
                   }
                   return null;
                 },
@@ -99,7 +111,7 @@ class _RegisterState extends State<Register> {
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Domisili wajib diisi';
+                    return 'City can not be empty';
                   }
                   return null;
                 },
@@ -124,19 +136,19 @@ class _RegisterState extends State<Register> {
                               Text("City ${cityController.text}"),
                             ],
                           ),
-                          //actions: [
-                            //TextButton(
-                              //child: Text("OK"),
-                              //onPressed: () {
-                                //Navigator.push(
-                                  //context,
-                                  //MaterialPageRoute(
-                                    //builder: (context) => LoginScreen2(),
-                                  //),
-                                //);
-                              //},
-                            //),
-                          //],
+                          actions: [
+                            TextButton(
+                              child: Text("OK"),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => LoginScreen2(),
+                                  ),
+                                );
+                              },
+                            ),
+                          ],
                         );
                       },
                     );
