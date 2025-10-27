@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:ppkd_andra/trial3/trial3/database/dbhelper.dart';
+import 'package:ppkd_andra/trial3/trial3/model_trial/user_model.dart';
 import 'package:ppkd_andra/trial3/trial3/view3/login_screen2.dart';
 
 class Register extends StatefulWidget {
@@ -12,16 +15,17 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
-    final TextEditingController nameController =TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-  final TextEditingController cityController =TextEditingController();
-  bool isVisible = false;
-  bool _obscurePass = true;
-  List <bool> isSelected = [true, false];
-  int selectedIndex = 0;
-    return Scaffold( backgroundColor: Color(0xff66785F),
+    final TextEditingController nameController = TextEditingController();
+    final TextEditingController phoneController = TextEditingController();
+    final TextEditingController emailController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
+    final TextEditingController cityController = TextEditingController();
+    bool isVisible = false;
+    bool _obscurePass = true;
+    List<bool> isSelected = [true, false];
+    int selectedIndex = 0;
+    return Scaffold(
+      backgroundColor: Color(0xff66785F),
       appBar: AppBar(title: Text("aGreen")),
       body: Padding(
         padding: const EdgeInsets.all(15),
@@ -70,21 +74,20 @@ class _RegisterState extends State<Register> {
                   labelText: 'Password',
                   border: OutlineInputBorder(),
                   suffixIcon: IconButton(
-                    icon: Icon(_obscurePass ? Icons.visibility_off : Icons.visibility),
-                    onPressed: (){
+                    icon: Icon(Icons.visibility),
+                    onPressed: () {
                       setState(() {
                         _obscurePass = !_obscurePass;
                       });
                     },
-                    ),
-                    
+                  ),
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Password can not be empty';
                   } else if (value.length < 7) {
                     return 'Minimum password length 7 characters';
-                  } 
+                  }
                   return null;
                 },
               ),
@@ -121,6 +124,15 @@ class _RegisterState extends State<Register> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     print(emailController.text);
+                    final UserModel data = UserModel(
+                      email: emailController.text,
+                      username: nameController.text,
+                      password: passwordController.text,
+                      phone: phoneController.text,
+                      city: cityController.text,
+                    );
+                    DbHelper.registerUser(data);
+                    Fluttertoast.showToast(msg: "Register Berhasil");
                     showDialog(
                       context: context,
                       builder: (context) {
@@ -189,7 +201,6 @@ class LoginButton extends StatelessWidget {
           ),
         ),
       ),
-      
     );
   }
 }

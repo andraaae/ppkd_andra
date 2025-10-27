@@ -11,14 +11,12 @@ class Welcomepage extends StatefulWidget {
     required this.name,
     required this.email,
     required this.city,
-    });
-    final String id;
-    final String name;
-    final String email;
-    final String city;
-    
-    
-    
+  });
+  final String id;
+  final String name;
+  final String email;
+  final String city;
+
   @override
   State<Welcomepage> createState() => _WelcomepageState();
 }
@@ -28,28 +26,32 @@ class _WelcomepageState extends State<Welcomepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Hi! ${widget.name}')),
-      body: Padding(padding: EdgeInsets.all(12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text('Welcome!', style: TextStyle(fontSize: 20)),
-          const SizedBox(height: 11),
-          const Text('This is your information:'),
-          Text('Name : ${widget.name}'),
-          Text('Email : ${widget.email}'),
-          SizedBox(height: 32),
-      TextButton(onPressed: (){
-        PreferenceHandler.removeLogin();
-        Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=> LoginScreen2()), (route) => false,
-        );
-      },
-      child: Text('Logout'),
-        )
-      ]
-    )
-  )
-);
-        
-    
+      body: Padding(
+        padding: EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('Welcome!', style: TextStyle(fontSize: 20)),
+            const SizedBox(height: 11),
+            const Text('This is your information:'),
+            Text('Name : ${widget.name}'),
+            Text('Email : ${widget.email}'),
+            Text('City : ${widget.city}'),
+            SizedBox(height: 32),
+            TextButton(
+              onPressed: () {
+                PreferenceHandler.removeLogin();
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen2()),
+                  (route) => false,
+                );
+              },
+              child: Text('Logout'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
-  }
+}
