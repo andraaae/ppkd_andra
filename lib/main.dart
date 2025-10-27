@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
-      home: Tugas10(),
+      home: Tugas9(),
     );
   }
 }
