@@ -30,7 +30,7 @@ class UserModel {
 
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
-      id: map['id']  as int ,
+      id: map['id'] as int,
       username: map['username'] as String,
       email: map['email'] as String,
       password: map['password'] as String,

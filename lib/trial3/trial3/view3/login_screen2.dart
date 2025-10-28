@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_andra/login/preference_handler.dart';
 import 'package:ppkd_andra/trial3/trial3/database/dbhelper.dart';
-import 'package:ppkd_andra/trial3/trial3/view3/welcomepage.dart';
+import 'package:ppkd_andra/trial3/trial3/view3/list_user.dart';
 import 'package:ppkd_andra/tugas11/login2/login_2.dart';
 import 'package:ppkd_andra/tugas11/sign%20up%20screen/sign_up.dart';
 
@@ -123,14 +123,7 @@ class _LoginScreen2State extends State<LoginScreen2> {
                         PreferenceHandler.saveLogin(true);
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => Welcomepage(
-                              id: username.id.toString() ?? "",
-                              name: username.username ?? "",
-                              email: username.email ?? "",
-                              city: username.city ?? "",
-                            ),
-                          ),
+                          MaterialPageRoute(builder: (context) => ListUser()),
                         );
                         //await DbHelper.checkAllUsers();
                         //if (username != null) {

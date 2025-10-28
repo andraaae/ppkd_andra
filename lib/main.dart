@@ -1,35 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ppkd_andra/login_2/login_2.dart';
-import 'package:ppkd_andra/trial3/trial3/view3/login_screen2.dart';
-
-import 'package:ppkd_andra/trial3/trial3/view3/register.dart';
+import 'package:ppkd_andra/trial3/trial3/view3/list_user.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:ppkd_andra/login/splash_screen.dart';
-import 'package:ppkd_andra/trial/buttomnav.dart';
-import 'package:ppkd_andra/trial/main_screen.dart';
-import 'package:ppkd_andra/trial3/trial3/view3/welcomepage.dart';
-
-import 'package:ppkd_andra/tugas10/konfirmasi_10.dart';
-import 'package:ppkd_andra/tugas10/tugas10.dart';
-import 'package:ppkd_andra/tugas11/database/dbhelper.dart';
-import 'package:ppkd_andra/tugas11/model/student_model.dart';
-import 'package:ppkd_andra/tugas11/model/user_model.dart';
-import 'package:ppkd_andra/tugas11/sign%20up%20screen/sign_up.dart';
-import 'package:ppkd_andra/tugas2/tugas2.dart';
-import 'package:ppkd_andra/tugas3/tugas3.dart';
-import 'package:ppkd_andra/tugas4/tugas4.dart';
-import 'package:ppkd_andra/tugas5/tugas5.dart';
-
-import 'package:ppkd_andra/tugas6/tugas_slicing.dart';
-import 'package:ppkd_andra/tugas7/menu_tugas7.dart';
-
-import 'package:ppkd_andra/tugas7/tugas7.dart';
-
-import 'package:ppkd_andra/tugas7/tugas7_2.dart';
-import 'package:ppkd_andra/tugas8/tugas8.dart';
-import 'package:ppkd_andra/tugas9/listmap.dart';
-import 'package:ppkd_andra/tugas9/listviewbuilder.dart';
-import 'package:ppkd_andra/tugas9/tugas9.dart';
+import 'package:ppkd_andra/trial3/trial3/view3/register.dart';
 
 void main() async {
   await initializeDateFormatting('id_ID', null);
@@ -63,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
-      home: Tugas10(),
+      home: Register(),
     );
   }
 }

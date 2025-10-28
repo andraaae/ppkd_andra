@@ -9,27 +9,10 @@ class Tugas9 extends StatefulWidget {
 }
 
 class _Tugas9State extends State<Tugas9> {
-  final List<String> cosmetics = [
-    "Skincare",
-    "Makeup",
-    "Haircare",
-    "Body Care",
-    "Nail Polish",
-    "Fragrance",
-    "Male Cosmetics",
-    "Cosmetic Tools",
-    "Intimate Cosmetics",
-    "Ethnical Cosmetics",
-  ];
+  int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView.builder(
-        itemCount: cosmetics.length,
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(title: Text(cosmetics[index]));
-        },
-      ),
-    );
+    return Scaffold();
   }
 }
