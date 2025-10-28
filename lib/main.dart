@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
       ),
 
       home: Register(),
+      home: Tugas9(),
     );
   }
 }
