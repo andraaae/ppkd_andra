@@ -8,7 +8,18 @@ class Listviewlist extends StatefulWidget {
 }
 
 class _ListviewlistState extends State<Listviewlist> {
-  final List<String> cosmetics = ['Skincare', 'Makeup', 'Hair care', 'Body Care', 'Nail Polish', 'Fragrance', 'Male cosmetics', 'Cosmetics tools', 'Intimate cosmetics', 'Ethnical cosmetics' ];
+  final List<String> cosmetics = [
+    'Skincare',
+    'Makeup',
+    'Hair care',
+    'Body Care',
+    'Nail Polish',
+    'Fragrance',
+    'Male cosmetics',
+    'Cosmetics tools',
+    'Intimate cosmetics',
+    'Ethnical cosmetics',
+  ];
   @override
   Widget build(BuildContext context) {
     return ListView.builder(

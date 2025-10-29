@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ppkd_andra/agreen/login_agreen.dart';
+import 'package:ppkd_andra/agreen/view/register_agreen.dart';
 import 'package:ppkd_andra/trial3/trial3/view3/list_user.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:ppkd_andra/trial3/trial3/view3/register.dart';
+import 'package:ppkd_andra/tugas9/tugas9.dart';
 
 void main() async {
   await initializeDateFormatting('id_ID', null);
@@ -35,7 +38,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
-      home: Register(),
+      home: LoginAgreen(),
     );
   }
 }
