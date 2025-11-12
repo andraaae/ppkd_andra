@@ -4,6 +4,8 @@ import 'package:ppkd_andra/agreen/view/register_agreen.dart';
 import 'package:ppkd_andra/trial3/trial3/view3/list_user.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:ppkd_andra/trial3/trial3/view3/register.dart';
+import 'package:ppkd_andra/tugas%2014/view/splash_screen.dart';
+import 'package:ppkd_andra/tugas%2014/view/user_screen.dart';
 import 'package:ppkd_andra/tugas9/tugas9.dart';
 
 void main() async {
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
-      home: LoginAgreen(),
+      home: SplashScreen(),
     );
   }
 }
