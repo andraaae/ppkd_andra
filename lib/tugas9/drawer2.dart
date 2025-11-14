@@ -34,10 +34,8 @@ class _Drawer2State extends State<Drawer2> {
                 backgroundImage: AssetImage('assets/images/sun.jpeg'),
               ),
               title: Text("admin"),
-              subtitle: Text("Keren"),
             ),
             Divider(),
-
             ListTile(
               onTap: () {
                 onTapDrawer(0);
@@ -46,14 +44,13 @@ class _Drawer2State extends State<Drawer2> {
               title: Text("Rumah"),
             ),
             Divider(),
-
-            ListTile(
-              onTap: () {
-                onTapDrawer(1);
-              },
-              leading: Icon(Icons.gesture),
-              title: Text("iya"),
-            ),
+            // ListTile(
+            //   onTap: () {
+            //     onTapDrawer(1);
+            //   },
+            //   leading: Icon(Icons.gesture),
+            //   title: Text("iya"),
+            // ),
           ],
         ),
       ),

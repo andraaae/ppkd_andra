@@ -6,6 +6,8 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:ppkd_andra/trial3/trial3/view3/register.dart';
 import 'package:ppkd_andra/tugas%2014/view/splash_screen.dart';
 import 'package:ppkd_andra/tugas%2014/view/user_screen.dart';
+import 'package:ppkd_andra/tugas%2015/views/login_screen.dart';
+import 'package:ppkd_andra/tugas%2015/views/register_screen.dart';
 import 'package:ppkd_andra/tugas9/tugas9.dart';
 
 void main() async {
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
-      home: SplashScreen(),
+      home: RegisterScreen(),
     );
   }
 }
