@@ -252,6 +252,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Text("Already have an account?"),
                     TextButton(
                       onPressed: () {
+                        Navigator.push(context,
+                        MaterialPageRoute(builder: 
+                        (context) => LoginScreen()
+                        )
+                        );
                         print('Register');
                       },
                       child: Text(

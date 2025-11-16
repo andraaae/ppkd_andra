@@ -3,6 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ppkd_andra/login/preference_handler.dart';
 import 'package:ppkd_andra/tugas 15/service/api.dart';
 import 'package:ppkd_andra/tugas 15/views/profile.dart';
+import 'package:ppkd_andra/tugas%2015/views/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -176,6 +177,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       const Text("Don't have an account?"),
                       TextButton(
                         onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> RegisterScreen()
+                          )
+                          );
                           Navigator.pushNamed(context, "/register_screen");
                         },
                         child: const Text(
