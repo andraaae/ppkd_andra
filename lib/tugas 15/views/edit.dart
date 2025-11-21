@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_andra/login/preference_handler.dart';
+import 'package:ppkd_andra/tugas 15/service/api.dart';
+import 'package:ppkd_andra/tugas%2015/models/profilemodel.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({super.key});
@@ -26,19 +28,37 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     emailController.text = await PreferenceHandler.getEmail() ?? "";
   }
 
-  void saveProfile() async {
+  Future<void> saveProfile() async {
     setState(() => isLoading = true);
 
-    await PreferenceHandler.saveUsername(nameController.text);
-    await PreferenceHandler.saveEmail(emailController.text);
+    try {
+
+      final result = await AuthAPI.editUserProfile(
+        name: nameController.text.trim(),
+        email: emailController.text.trim(),
+      );
+
+      await PreferenceHandler.saveUsername(
+        result.data?.name ?? nameController.text,
+      );
+      await PreferenceHandler.saveEmail(
+        result.data?.email ?? emailController.text,
+      );
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(result.message ?? "Profile updated successfully"),
+        ),
+      );
+
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Profile()));
+    } catch (e) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(e.toString())));
+    }
 
     setState(() => isLoading = false);
-
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(const SnackBar(content: Text("Profile updated!")));
-
-    Navigator.pop(context, true); // ← memberi sinyal ke HomeScreen
   }
 
   @override

@@ -141,7 +141,7 @@ class _LoginScreen2State extends State<LoginScreen2> {
 
                         if (!context.mounted) return;
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Login success ${username}')),
+                          SnackBar(content: Text('Login success $username')),
                         );
                         //Navigator.pushReplacement(
                         //context,

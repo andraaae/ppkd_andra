@@ -21,7 +21,7 @@ class _RegisterState extends State<Register> {
     final TextEditingController passwordController = TextEditingController();
     final TextEditingController cityController = TextEditingController();
     bool isVisible = false;
-    bool _obscurePass = true;
+    bool obscurePass = true;
     List<bool> isSelected = [true, false];
     int selectedIndex = 0;
     return Scaffold(
@@ -68,7 +68,7 @@ class _RegisterState extends State<Register> {
               ),
               SizedBox(height: 16),
               TextFormField(
-                obscureText: _obscurePass,
+                obscureText: obscurePass,
                 controller: passwordController,
                 decoration: InputDecoration(
                   labelText: 'Password',
@@ -77,7 +77,7 @@ class _RegisterState extends State<Register> {
                     icon: Icon(Icons.visibility),
                     onPressed: () {
                       setState(() {
-                        _obscurePass = !_obscurePass;
+                        obscurePass = !obscurePass;
                       });
                     },
                   ),

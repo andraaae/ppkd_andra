@@ -1,18 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:ppkd_andra/agreen/login_agreen.dart';
-import 'package:ppkd_andra/agreen/view/register_agreen.dart';
-import 'package:ppkd_andra/trial3/trial3/view3/list_user.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:ppkd_andra/trial3/trial3/view3/register.dart';
-import 'package:ppkd_andra/tugas%2014/view/splash_screen.dart';
-import 'package:ppkd_andra/tugas%2014/view/user_screen.dart';
-import 'package:ppkd_andra/tugas%2015/models/profilemodel.dart';
-import 'package:ppkd_andra/tugas%2015/views/login_screen.dart';
+import 'package:ppkd_andra/firebase_options.dart';
 import 'package:ppkd_andra/tugas%2015/views/register_screen.dart';
-import 'package:ppkd_andra/tugas9/tugas9.dart';
 
 void main() async {
   await initializeDateFormatting('id_ID', null);
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 

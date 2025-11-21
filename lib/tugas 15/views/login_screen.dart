@@ -153,7 +153,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                             Fluttertoast.showToast(msg: "Login success!");
 
-                            // PINDAH PAGE SETELAH LOGIN SUKSES
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'package:http/http.dart' as http;
 import 'package:ppkd_andra/login/preference_handler.dart';
+import 'package:ppkd_andra/tugas%2015/models/editmodel.dart';
 import 'package:ppkd_andra/tugas%2015/models/loginmodel.dart';
 import 'package:ppkd_andra/tugas%2015/models/profilemodel.dart';
 import 'package:ppkd_andra/tugas%2015/models/registermodel.dart';
@@ -64,6 +65,29 @@ class AuthAPI {
     log(response.body);
     if (response.statusCode == 200) {
       return Profile.fromJson(json.decode(response.body));
+    } else {
+      final error = json.decode(response.body);
+      throw Exception(error["message"]);
+    }
+  }
+
+  static Future<EditProfile> editUserProfile({
+    required String name,
+    required String email,
+  }) async {
+    final token = await PreferenceHandler.getToken();
+    final url = Uri.parse(Endpoint.editprofile);
+
+    final response = await http.put(
+      url,
+      headers: {"Accept": "application/json", "Authorization": "Bearer $token"},
+      body: {"name": name, "email": email},
+    );
+
+    print(response.body);
+
+    if (response.statusCode == 200) {
+      return EditProfile.fromJson(json.decode(response.body));
     } else {
       final error = json.decode(response.body);
       throw Exception(error["message"]);

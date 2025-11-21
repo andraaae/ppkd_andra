@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "323760595918",
+    "project_id": "ppkd-andra",
+    "storage_bucket": "ppkd-andra.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323760595918:android:63844aaa8ea09fc82e019f",
+        "android_client_info": {
+          "package_name": "com.example.ppkd_andra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDdwr8g9PU3zY2PBXcZoOkKAUVXYww9r4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

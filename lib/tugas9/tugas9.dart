@@ -9,7 +9,7 @@ class Tugas9 extends StatefulWidget {
 }
 
 class _Tugas9State extends State<Tugas9> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
