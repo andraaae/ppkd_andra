@@ -51,7 +51,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         ),
       );
 
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Profile()));
+      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Profile()));
     } catch (e) {
       ScaffoldMessenger.of(
         context,
