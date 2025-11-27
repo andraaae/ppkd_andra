@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ppkd_andra/login/preference_handler.dart';
 import 'package:ppkd_andra/trial3/trial3/database/dbhelper.dart';
 import 'package:ppkd_andra/trial3/trial3/view3/list_user.dart';
-import 'package:ppkd_andra/tugas11/login2/login_2.dart';
-import 'package:ppkd_andra/tugas11/sign%20up%20screen/sign_up.dart';
 
 class LoginScreen2 extends StatefulWidget {
   const LoginScreen2({super.key});
